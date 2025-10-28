@@ -37,7 +37,7 @@
                                               &kp RGUI   &kp ESCAPE    &kp ENTER
             >;
 
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         /* layer_2 {
