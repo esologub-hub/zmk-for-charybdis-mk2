@@ -16,12 +16,12 @@
 
         layer_0 {
             bindings = <
-&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5      &kp N6     &kp N7     &kp N8     &kp N9            &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O             &kp P     &kp BSLH
-&kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G       &kp H      &kp J      &kp K      &kp L             &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp LEFT_BRACKET  &kp FSLH  &kp RSHFT
-                           &mo 1   &kp LCTRL  &kp LALT    &kp LALT   &kp SPACE
-                                   &mkp MB1   &mkp MB2    &kp ENTER
+&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5      &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R         &kp T       &kp Y          &kp U      &kp I      &kp O       &kp P     &kp BSLH
+&kp CAPS   &kp A   &kp S   &kp D   &kp F         &kp G       &kp H          &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V         &kp B       &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp RSHFT
+                           &mo 1   &kp LCTRL     &kp LALT    &kp LC(LSHFT)  &kp SPACE
+                                   &kp LEFT_GUI  &kp ESC     &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -29,12 +29,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2         &kp F3  &kp F4        &kp F5     &kp F6        &kp F7         &kp F8       &kp F9    &kp F10        &kp F11           &kp F12
-&kp CAPS        &none          &none   &none         &none      &bt BT_NXT    &none          &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &none          &none   &none         &none      &bt BT_CLR    &kp BACKSPACE  &kp LEFT     &kp DOWN  &kp RIGHT      &none             &none
-&kp LCTRL       &kp LS(GRAVE)  &none   &none         &none      &none         &none          &mkp MB1     &mkp MB2  &kp LS(C)      &kp LS(V)         &kp EQUAL
-                                       &kp LEFT_WIN  &kp SPACE  &none         &kp LALT       &kp DELETE
-                                                     &mkp MB1   &mkp MB2      &kp ENTER
+&kp F1          &kp F2     &kp F3     &kp F4  &kp F5     &kp F6        &kp F7         &kp F8       &kp F9    &kp F10        &kp F11           &kp F12
+&kp CAPS        &none      &none      &none   &none      &bt BT_NXT    &kp HOME       &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &none      &none      &none   &none      &bt BT_CLR    &kp END        &kp LEFT     &kp DOWN  &kp RIGHT      &none             &none
+&kp LCTRL       &kp TILDE  &kp GRAVE  &none   &none      &none         &none          &mkp MB1     &mkp MB2  &kp LS(C)      &kp LS(V)         &kp EQUAL
+                                      &mo 0   &kp RCTRL  &kp RALT      &kp BACKSPACE  &kp DELETE
+                                              &kp RGUI   &kp ESCAPE    &kp ENTER
             >;
 
             trackball-bindings = <&tsl>;
