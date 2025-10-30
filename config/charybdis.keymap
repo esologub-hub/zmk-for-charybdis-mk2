@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define TB_DPI_LOW  40 Newton
+#define TB_DPI_HIGH 800 Newton
+
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
@@ -17,7 +20,10 @@
         TB_Toggle: TB_Toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            binding = <
+                &if_pressed (&trackball_set_dpi TB_DPI_HIGH)
+                &else (&trackball_set_dpi TB_DPI_LOW)
+            >;
             label = "TB_TOGGLE";
         };
     };
