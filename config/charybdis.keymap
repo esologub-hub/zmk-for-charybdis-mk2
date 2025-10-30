@@ -22,10 +22,10 @@
             #binding-cells = <0>;
             binding = <
                 &if_pressed (
-                    &trackball_set_dpi TB_DPI_HIGH
+                    &trackball_set_dpi 800
                 )
                 &else (
-                    &trackball_set_dpi TB_DPI_LOW
+                    &trackball_set_dpi 40
                 )
             >;
             label = "TB_TOGGLE";
