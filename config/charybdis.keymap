@@ -16,7 +16,7 @@
     keymap {
         compatible = "zmk,keymap";
         behaviors {
-            trackball: trackball {
+            my_trackball: trackball {
                 compatible = "zmk,behavior-trackball";
                 label = "my_trackball";
                 bindings = <&tmv_coarse>;
@@ -49,7 +49,7 @@
                                            &kp DEL    &lt 1 ESC       &kp RIGHT_WIN
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&my_trackball>;
         };
 
         layer_1 {
@@ -62,7 +62,7 @@
                                                       &kp DEL    &kp ESC       &kp RIGHT_WIN
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&my_trackball>;
         };
 
         layer_2 {
