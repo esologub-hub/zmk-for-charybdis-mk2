@@ -20,17 +20,17 @@
                 compatible = "zmk,behavior-trackball";
                 label = "trackball";
                 bindings = <&tmv_coarse>;
-                dpi = <1000>;
-                acceleration = <0.5>;
-                scroll_dpi = <500>;
+                dpi = 1000;
+                acceleration = 0.5;
+                scroll_dpi = 500;
             };
         };
         layer_overrides {
             layer_0 {
-                trackball { dpi = <1500>; acceleration = <0.7>; };
+                trackball { dpi = 1500; acceleration = 0.7; };
             };
             layer_1 {
-                trackball { dpi = <800>; acceleration = <0.3>; };
+                trackball { dpi = 800; acceleration = 0.3; };
             };
         };
         layer_0 {
