@@ -28,14 +28,14 @@
         layer_overrides {
             layer_0 {
                 trackball {
-                    dpi = 1500;
-                    acceleration = 0.7;
+                    dpi = "1500";
+                    acceleration = "0.7";
                 };
             };
             layer_1 {
                 trackball {
-                    dpi = 800;
-                    acceleration = 0.3;
+                    dpi = "800";
+                    acceleration = "0.3";
                 };
             };
         };
