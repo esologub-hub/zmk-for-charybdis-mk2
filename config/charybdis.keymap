@@ -20,9 +20,9 @@
                 compatible = "zmk,behavior-trackball";
                 label = "trackball";
                 bindings = <&tmv_coarse>;
-                dpi = 1000;
-                acceleration = 0.5;
-                scroll_dpi = 500;
+                dpi = "1000";
+                acceleration = "0.5";
+                scroll_dpi = "500";
             };
         };
         layer_overrides {
