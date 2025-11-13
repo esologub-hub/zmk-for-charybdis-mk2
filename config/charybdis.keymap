@@ -15,7 +15,24 @@
 
     keymap {
         compatible = "zmk,keymap";
-
+        behaviors {
+            trackball: trackball {
+                compatible = "zmk,behavior-trackball";
+                label = "trackball";
+                bindings = <&tmv_coarse>;
+                dpi = <1000>;
+                acceleration = <0.5>;
+                scroll_dpi = <500>;
+            };
+        };
+        layer_overrides {
+            layer_0 {
+                trackball { dpi = <1500>; acceleration = <0.7>; };
+            };
+            layer_1 {
+                trackball { dpi = <800>; acceleration = <0.3>; };
+            };
+        };
         layer_0 {
             bindings = <
 &kp EQUAL   &kp N1  &kp N2  &kp N3         &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
