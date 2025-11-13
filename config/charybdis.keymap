@@ -18,7 +18,7 @@
         behaviors {
             trackball: trackball {
                 compatible = "zmk,behavior-trackball";
-                label = "trackball";
+                label = "my_trackball";
                 bindings = <&tmv_coarse>;
                 dpi = "1000";
                 acceleration = "0.5";
