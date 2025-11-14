@@ -13,8 +13,20 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "NEW_BEHAVIOR";
+            #sensor-binding-cells = <2>;
+            bindings = <&none>, <&kp>;
+
+            tap-ms = <777>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
+
         layer_0 {
             bindings = <
 &kp EQUAL   &kp N1  &kp N2  &kp N3         &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
