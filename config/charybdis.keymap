@@ -37,7 +37,7 @@
                                            &kp DEL    &lt 1 ESC       &kp RIGHT_WIN
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&fast_trackball>;
         };
 
         layer_1 {
