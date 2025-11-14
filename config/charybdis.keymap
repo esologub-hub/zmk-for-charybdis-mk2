@@ -19,7 +19,7 @@
             label = "fast_trackball";
             #trackball-binding-cells = <1>;
             bindings = <&tmv_coarse>;  // какое действие выполняет трекбол
-            dpi = <1200>;
+            сpi = <1200>;
             /* acceleration = 0.6; */
             /* scroll_dpi = 400; */   
         };
@@ -64,7 +64,7 @@
                                    &trans   &trans     &trans
             >;
 
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         /* layer_2 {
