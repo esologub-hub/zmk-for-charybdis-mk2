@@ -18,7 +18,7 @@
             compatible = "zmk,behavior-trackball";
             label = "fast_trackball";
             bindings = <&tmv_coarse>;  // какое действие выполняет трекбол
-            dpi = 1200;
+            dpi = <1200>;
             /* acceleration = 0.6; */
             /* scroll_dpi = 400; */   
         };
