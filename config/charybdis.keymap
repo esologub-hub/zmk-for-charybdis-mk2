@@ -14,13 +14,13 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "NEW_BEHAVIOR";
-            #sensor-binding-cells = <2>;
-            bindings = <&none>, <&kp>;
-
-            tap-ms = <777>;
+        fast_trackball: trackball {
+            compatible = "zmk,behavior-trackball";
+            label = "fast_trackball";
+            bindings = <&tmv_coarse>;  // какое действие выполняет трекбол
+            dpi = 1200;
+            /* acceleration = 0.6; */
+            /* scroll_dpi = 400; */   
         };
     };
 
@@ -50,7 +50,7 @@
                                                       &kp DEL    &kp ESC       &kp RIGHT_WIN
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tmv_fine>;
         };
 
         layer_2 {
