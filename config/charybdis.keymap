@@ -14,7 +14,7 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        fast_trackball: trackball {
+        fast_trackball: trackball {   //not working now
             compatible = "zmk,behavior-trackball";
             label = "fast_trackball";
             #trackball-binding-cells = <1>;
