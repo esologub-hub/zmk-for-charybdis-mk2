@@ -14,14 +14,15 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        fast_trackball: trackball {   //not working now
+        fast_trackball: trackball {
             compatible = "zmk,behavior-trackball";
             label = "fast_trackball";
             #trackball-binding-cells = <1>;
             bindings = <&tmv_coarse>;  // какое действие выполняет трекбол
             dpi = <1200>;
+
             /* acceleration = 0.6; */
-            /* scroll_dpi = 400; */   
+            /* scroll_dpi = 400; */
         };
     };
 
@@ -43,12 +44,12 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE        &kp F1     &kp F2     &kp F4         &kp F4     &kp F5        &kp F6         &kp F7     &kp F8    &kp F9     &kp F10         &kp BACKSLASH
-&kp TAB          &kp HOME   &none      &none          &none      &bt BT_NXT    &kp PG_UP      &none      &kp UP    &none      &kp LBKT        &kp RBKT
-&kp PRINTSCREEN  &kp END    &none      &none          &none      &bt BT_CLR    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
-&kp LSHFT        &kp TILDE  &kp GRAVE  &none          &to 0      &to 1         &mkp MB3       &mkp MB1   &mkp MB2  &kp LC(C)  &kp LC(V)       &kp RSHFT
-                                       &kp BACKSPACE  &kp RCTRL  &kp RALT      &kp ENTER      &kp SPACE
-                                                      &kp DEL    &kp ESC       &kp RIGHT_WIN
+&kp GRAVE        &kp F1     &kp F2     &kp F4           &kp F4          &kp F5        &kp F6         &kp F7     &kp F8    &kp F9     &kp F10         &kp BACKSLASH
+&kp TAB          &kp HOME   &none      &fast_trackball  &bt BT_CLR_ALL  &bt BT_NXT    &kp PG_UP      &none      &kp UP    &none      &kp LBKT        &kp RBKT
+&kp PRINTSCREEN  &kp END    &none      &none            &none           &bt BT_CLR    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&kp LSHFT        &kp TILDE  &kp GRAVE  &none            &to 0           &to 1         &mkp MB3       &mkp MB1   &mkp MB2  &kp LC(C)  &kp LC(V)       &kp RSHFT
+                                       &kp BACKSPACE    &kp RCTRL       &kp RALT      &kp ENTER      &kp SPACE
+                                                        &kp DEL         &kp ESC       &kp RIGHT_WIN
             >;
 
             trackball-bindings = <&tmv_fine>;
