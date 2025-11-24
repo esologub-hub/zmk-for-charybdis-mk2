@@ -9,6 +9,9 @@
     flavor = "balanced";
     quick-tap-ms = <150>;
 };
+&mt {
+  flavor = "tap-preferred";
+};
 
 / {
     combos { compatible = "zmk,combos"; };
