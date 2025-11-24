@@ -13,25 +13,12 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    behaviors {
-        fast_trackball: trackball {
-            compatible = "zmk,behavior-trackball";
-            label = "fast_trackball";
-            #trackball-binding-cells = <1>;
-            bindings = <&tmv_coarse>;  // какое действие выполняет трекбол
-            dpi = <1200>;
-
-            /* acceleration = 0.6; */
-            /* scroll_dpi = 400; */
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp GRAVE   &kp N1  &kp N2  &kp N3         &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp RIGHT_BRACKET
+&kp EQUAL   &kp N1  &kp N2  &kp N3         &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9      &kp N0    &kp MINUS
 &kp TAB     &kp Q   &kp W   &kp E          &kp R      &kp T           &kp Y          &kp U      &kp I      &kp O       &kp P     &kp LEFT_BRACKET
 &lt 2 CAPS  &kp A   &kp S   &kp D          &kp F      &kp G           &kp H          &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z   &kp X   &kp C          &kp V      &kp B           &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp RSHFT
@@ -44,12 +31,12 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE        &kp F1    &kp F2  &kp F4         &kp F4     &kp F5        &kp F6         &kp F7     &kp F8    &kp F9     &kp F10    &kp PIPE
-&kp TAB          &kp HOME  &none   &none          &none      &bt BT_NXT    &kp PG_UP      &none      &kp UP    &none      &kp PLUS   &kp MINUS
-&kp PRINTSCREEN  &kp END   &none   &none          &none      &bt BT_CLR    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp EQUAL  &kp UNDER
-&kp LSHFT        &none     &none   &kp LC(C)      &kp LC(V)  &to 1         &mkp MB3       &mkp MB1   &mkp MB2  &none      &kp BSLH   &kp RSHFT
-                                   &kp BACKSPACE  &kp RCTRL  &kp RALT      &kp ENTER      &kp SPACE
-                                                  &kp DEL    &to 0         &kp RIGHT_WIN
+&kp GRAVE        &kp F1     &kp F2  &kp F3         &kp F4     &kp F5        &kp F6         &kp F7     &kp F8    &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE
+&kp TAB          &kp HOME   &none   &none          &none      &bt BT_NXT    &kp PG_UP      &none      &kp UP    &none           &none            &kp RIGHT_BRACKET
+&kp PRINTSCREEN  &kp END    &none   &none          &none      &bt BT_CLR    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT       &none            &none
+&kp LSHFT        &kp TILDE  &none   &kp LC(C)      &kp LC(V)  &to 1         &mkp MB3       &mkp MB1   &mkp MB2  &none           &kp BSLH         &kp RSHFT
+                                    &kp BACKSPACE  &kp RCTRL  &kp RALT      &kp ENTER      &kp SPACE
+                                                   &kp DEL    &to 0         &kp RIGHT_WIN
             >;
 
             trackball-bindings = <&tmv_fine>;
@@ -57,8 +44,8 @@
 
         layer_2 {
             bindings = <
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans
 &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
-&trans  &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &trans   &trans
 &trans  &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &trans   &trans
 &trans  &trans   &trans   &trans   &trans   &trans     &trans   &none    &trans   &trans   &trans   &trans
                           &trans   &trans   &trans     &trans   &trans
