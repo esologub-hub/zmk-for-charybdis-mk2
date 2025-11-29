@@ -79,7 +79,7 @@
             step_size = <250>;
         };
 
-        /omit-if-no-ref/ tkp_fast: behavior_trackball_key_press {
+        /omit-if-no-ref/ tkp_fast: behavior_trackball_key_press1 {
             compatible = "zmk,behavior-point-device-directional";
             label = "TRACKBALL_KEY_PRESS_FAST";
             #trackball-binding-cells = <4>;
