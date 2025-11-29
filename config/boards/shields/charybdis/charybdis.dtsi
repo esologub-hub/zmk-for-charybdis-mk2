@@ -68,15 +68,15 @@ behaviors {
 		};
 	};
 
-	behaviors {
-		/omit-if-no-ref/ tmv_coarse: behavior_trackball_move_coarse {
-			compatible = "zmk,behavior-point-device-incremental";
-			label = "TRACKBALL_MOVE_COARSE";
-			#trackball-binding-cells = <0>;
-      mode = "move-mode";
-      flavor = "default";
-      scale_mode = "dividor";
-      scale_factor = <1>;
-		};
+behaviors {
+	/omit-if-no-ref/ tmv_coarse: behavior_trackball_move_coarse {
+		compatible = "zmk,behavior-point-device-incremental";
+		label = "TRACKBALL_MOVE_COARSE";
+		#trackball-binding-cells = <0>;
+  mode = "move-mode";
+  flavor = "default";
+  scale_mode = "dividor";
+  scale_factor = <1>;
 	};
+};
 
