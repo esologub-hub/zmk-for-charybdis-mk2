@@ -24,7 +24,7 @@
 	
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        node-label = "KSCAN";
+        name = "KSCAN";
 
         diode-direction = "row2col";
 		row-gpios
