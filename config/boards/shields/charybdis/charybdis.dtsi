@@ -56,5 +56,27 @@
 	};
 };
 
+behaviors {
+		/omit-if-no-ref/ tmv_fine: behavior_trackball_move_fine {
+			compatible = "zmk,behavior-point-device-incremental";
+			label = "TRACKBALL_MOVE_FINE";
+			#trackball-binding-cells = <0>;
+      mode = "move-mode";
+      flavor = "default";
+      scale_mode = "dividor";
+      scale_factor = <4>;
+		};
+	};
 
+	behaviors {
+		/omit-if-no-ref/ tmv_coarse: behavior_trackball_move_coarse {
+			compatible = "zmk,behavior-point-device-incremental";
+			label = "TRACKBALL_MOVE_COARSE";
+			#trackball-binding-cells = <0>;
+      mode = "move-mode";
+      flavor = "default";
+      scale_mode = "dividor";
+      scale_factor = <1>;
+		};
+	};
 
