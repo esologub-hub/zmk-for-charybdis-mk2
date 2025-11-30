@@ -6,9 +6,7 @@
  
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
-
 #include "charybdis.dtsi"
-#include "trackball.dtsi"
 
 &default_transform {
     col-offset = <6>;
