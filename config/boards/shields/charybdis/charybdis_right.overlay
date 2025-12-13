@@ -57,11 +57,11 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		cpi = <1200>;
+		cpi = <600>;
         
 		swap-xy; /* optional */
         invert-x; /* optional */
-        //invert-y; /* optional */
+        invert-y; /* optional */
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -83,7 +83,11 @@
         compatible = "zmk,input-listener";
 		status = "okay";
         device = <&trackball>;
-		snipe {
+		fast {
+			layers = <0>;
+			input-processors = <&zip_xy_scaler 2 1>;
+		};
+        snipe {
 			layers = <1>;
 			input-processors = <&zip_xy_scaler 1 3>;
 		};
