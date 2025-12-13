@@ -83,10 +83,10 @@
         compatible = "zmk,input-listener";
 		status = "okay";
         device = <&trackball>;
-		fast {
+		/*fast {
 			layers = <0>;
 			input-processors = <&zip_xy_scaler 2 1>;
-		};
+		};*/
         snipe {
 			layers = <1>;
 			input-processors = <&zip_xy_scaler 1 3>;
