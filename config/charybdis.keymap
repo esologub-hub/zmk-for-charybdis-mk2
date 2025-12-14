@@ -52,7 +52,7 @@
 &kp PRINTSCREEN  &kp DELETE  &kp END   &mo 2           &none           &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
 &trans           &kp TILDE   &none     &kp RC(INSERT)  &kp RS(INSERT)  &none     &mkp MB3       &mkp MB1  &mkp MB2  &none      &kp BSLH  &trans
                                        &trans          &trans          &lang     &trans         &trans
-                                                       &trans          &to 0     &trans
+                                                       &trans          &none     &trans
             >;
         };
 
@@ -62,7 +62,7 @@
 &kp CAPS  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16  &kp F17  &kp F18  &kp F19  &kp F20     &trans
 &trans    &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &trans      &trans
 &trans    &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &bt BT_NXT  &bt BT_CLR_ALL
-                            &trans   &trans   &trans     &trans   &trans
+                            &trans   &trans   &none      &trans   &trans
                                      &trans   &trans     &trans
             >;
         };
