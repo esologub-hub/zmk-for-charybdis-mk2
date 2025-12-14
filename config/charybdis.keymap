@@ -31,21 +31,21 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE        &kp F1     &kp F2      &kp F3          &kp F4          &kp F5           &kp F6         &kp F7     &kp F8    &kp F9     &kp F10   &kp PIPE
-&kp TAB          &kp HOME   &kp INSERT  &none           &none           &bt BT_NXT       &kp PG_UP      &none      &kp UP    &none      &none     &kp RIGHT_BRACKET
-&kp PRINTSCREEN  &kp END    &none       &none           &none           &bt BT_CLR       &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
-&kp LSHFT        &kp TILDE  &none       &kp LC(INSERT)  &kp LS(INSERT)  &kp ESCAPE       &mkp MB3       &mkp MB1   &mkp MB2  &none      &kp BSLH  &kp RSHFT
-                                        &kp BACKSPACE   &kp RCTRL       &kp LS(LCTRL)    &kp ENTER      &kp SPACE
-                                                        &kp DEL         &to 0            &kp RIGHT_WIN
+&kp GRAVE        &kp F1      &kp F2    &kp F3          &kp F4          &kp F5           &kp F6         &kp F7     &kp F8    &kp F9     &kp F10   &kp PIPE
+&kp TAB          &kp INSERT  &kp HOME  &kp ESC         &none           &none            &kp PG_UP      &none      &kp UP    &none      &none     &kp RIGHT_BRACKET
+&kp PRINTSCREEN  &kp DELETE  &kp END   &mo 2           &none           &none            &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
+&kp LSHFT        &kp TILDE   &none     &kp LC(INSERT)  &kp LS(INSERT)  &none            &mkp MB3       &mkp MB1   &mkp MB2  &none      &kp BSLH  &kp RSHFT
+                                       &kp BACKSPACE   &kp RCTRL       &kp LS(LCTRL)    &kp ENTER      &kp SPACE
+                                                       &kp DEL         &to 0            &kp RIGHT_WIN
             >;
         };
 
         layer_2 {
             bindings = <
-&trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6   &kp F7    &kp F8   &kp F9   &kp F10  &trans
-&kp CAPS  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16  &kp F17   &kp F18  &kp F19  &kp F20  &trans
-&trans    &trans   &trans   &trans   &trans   &trans     &trans   &trans    &none    &none    &trans   &trans
-&trans    &trans   &trans   &trans   &trans   &trans     &trans   &mkp MB1  &trans   &trans   &trans   &trans
+&trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6   &kp F7   &kp F8   &kp F9   &kp F10     &trans
+&kp CAPS  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16  &kp F17  &kp F18  &kp F19  &kp F20     &trans
+&trans    &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &trans      &trans
+&trans    &trans   &trans   &trans   &trans   &trans     &trans   &trans   &trans   &trans   &bt BT_NXT  &bt BT_CLR_ALL
                             &trans   &trans   &trans     &trans   &trans
                                      &trans   &trans     &trans
             >;
