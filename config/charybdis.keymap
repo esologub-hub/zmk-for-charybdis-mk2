@@ -20,12 +20,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
+                <&macro_press &kp LCTRL>,
                 <&macro_wait_time 100>,
                 <&kp LSHFT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_release &kp LCTRL>;
 
             label = "LANG";
         };
