@@ -49,7 +49,7 @@
             bindings = <
 &kp GRAVE        &kp F1      &kp F2    &kp F3          &kp F4          &kp F5    &kp F6         &kp F7    &kp F8    &kp F9     &kp F10   &kp PIPE
 &trans           &kp INSERT  &kp HOME  &kp ESC         &none           &none     &kp PG_UP      &none     &kp UP    &none      &none     &kp RIGHT_BRACKET
-&kp PRINTSCREEN  &none       &kp END   &none           &none           &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
+&kp PRINTSCREEN  &kp LC(A)   &kp END   &none           &kp LC(F)       &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
 &trans           &kp TILDE   &none     &kp RC(INSERT)  &kp RS(INSERT)  &none     &none          &mkp MB1  &mkp MB2  &mkp MB3   &kp BSLH  &trans
                                        &trans          &trans          &lang     &trans         &trans
                                                        &trans          &none     &trans
