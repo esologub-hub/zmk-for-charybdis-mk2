@@ -48,8 +48,8 @@
         layer_1 {
             bindings = <
 &kp GRAVE        &kp F1     &kp F2     &kp F3          &kp F4          &kp F5       &kp F6         &kp F7    &kp F8    &kp F9     &kp F10   &kp F11
-&trans           &none      &none      &none           &none           &kp TILDE    &kp PG_UP      &none     &kp UP    &none      &kp HOME  &kp INS
-&kp PRINTSCREEN  &kp LC(A)  &kp LC(S)  &none           &kp LC(F)       &none        &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END   &none
+&trans           &none      &none      &none           &none           &kp TILDE    &kp PG_UP      &none     &kp UP    &none      &kp PIPE  &kp HOME
+&kp PRINTSCREEN  &kp LC(A)  &kp LC(S)  &none           &kp LC(F)       &none        &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS   &kp END
 &trans           &kp TILDE  &none      &kp RC(INSERT)  &kp RS(INSERT)  &none        &none          &mkp MB1  &mkp MB2  &mkp MB3   &kp BSLH  &trans
                                        &trans          &trans          &lang        &trans         &trans
                                                        &trans          &none        &trans
