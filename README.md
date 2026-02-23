@@ -4,8 +4,9 @@ https://nickcoutsos.github.io/keymap-editor/
 to configure keys
 
 
-<img width="944" height="478" alt="image" src="https://github.com/user-attachments/assets/1059318a-1861-4bcc-bbf2-04a993aae8c0" />
+<img width="939" height="486" alt="image" src="https://github.com/user-attachments/assets/0995e21a-6469-4595-b32b-34a94a8f9b3b" />
 
-<img width="944" height="478" alt="image" src="https://github.com/user-attachments/assets/58a4d0a1-7742-41cf-aa33-2de2a4bcfbcc" />
+<img width="939" height="486" alt="image" src="https://github.com/user-attachments/assets/83dc07ea-78bd-4ce9-922b-502aaee43708" />
 
-<img width="944" height="478" alt="image" src="https://github.com/user-attachments/assets/8a45d04d-88a0-4112-82e8-e31011e9ac9c" />
+<img width="939" height="486" alt="image" src="https://github.com/user-attachments/assets/2fc46854-ab0f-4ec9-9a19-d5977ff4c0ee" />
+
