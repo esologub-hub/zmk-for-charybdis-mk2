@@ -21,11 +21,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_WIN>,
                 <&macro_wait_time 100>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp LSHFT &kp RCTRL>;
+                <&kp SPACE>,
+                <&macro_release>;
 
             label = "LANG";
         };
