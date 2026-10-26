@@ -34,7 +34,8 @@ jobs:
           west init -l config
           west update --fetch-opt=--filter=tree:0
           west zephyr-export
-          west manifest --freeze > west-frozen.yml
+          west manifest --resolve > west-resolved.yml
+          west manifest --freeze --active-only > west-frozen.yml
       - name: Build
         env:
           SHIELD: ${{ matrix.shield }}
@@ -48,7 +49,7 @@ jobs:
           SHIELD: ${{ matrix.shield }}
         run: |
           mkdir -p artifacts
-          for file in build/zephyr/zmk.uf2 build/zephyr/.config build/zephyr/zephyr.dts west-frozen.yml; do
+          for file in build/zephyr/zmk.uf2 build/zephyr/.config build/zephyr/zephyr.dts west-frozen.yml west-resolved.yml; do
             if [ -f "$file" ]; then cp "$file" "artifacts/$(basename "$file")"; fi
           done
           if [ -f artifacts/zmk.uf2 ]; then mv artifacts/zmk.uf2 "artifacts/$SHIELD.uf2"; fi

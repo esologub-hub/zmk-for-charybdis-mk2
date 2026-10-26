@@ -16,7 +16,8 @@ CI also pins the official `zmkfirmware/zmk-build-arm` container to digest
 `sha256:edb1c953438c6f720ddb79c3762f3972013b7fbbaf4fff3592fc869983e7afc5`
 and the checkout/upload actions to commit SHAs. The build matrix in `build.yaml`
 remains the source of board/shield selection. Each target uploads its UF2,
-effective `.config`, `zephyr.dts`, and `west-frozen.yml` as a separate artifact.
+effective `.config`, `zephyr.dts`, `west-frozen.yml` (active projects), and
+`west-resolved.yml` (including inactive projects) as a separate artifact.
 
 Zephyr is explicitly overridden in the west manifest because the fixes branch in
 ZMK's imported manifest can move. Its module imports retain ZMK's exclusions.
@@ -47,7 +48,8 @@ Use the GitHub Actions build for this branch, or a ZMK/Zephyr 4.1 build environm
 west init -l config
 west update --fetch-opt=--filter=tree:0
 west zephyr-export
-west manifest --freeze > west-frozen.yml
+west manifest --resolve > west-resolved.yml
+west manifest --freeze --active-only > west-frozen.yml
 west build -s zmk/app -d build-right -b 'nice_nano@2.0.0//zmk' -- \
   -DZMK_CONFIG="$(pwd)/config" -DSHIELD=charybdis_right
 west build -s zmk/app -d build-left -b 'nice_nano@2.0.0//zmk' -- \
