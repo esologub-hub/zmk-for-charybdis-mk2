@@ -12,6 +12,12 @@ the left half remains a peripheral. Neither matrix wiring nor SPI wiring changes
 | Zephyr (`v4.1.0+zmk-fixes` snapshot) | `10ba6d0cb38bc3d258775d27982f707599320085` |
 | badjeff PMW3610 driver | `44b4a76b74d293a93cec4ccb7e04cb8d29c10f93` |
 
+CI also pins the official `zmkfirmware/zmk-build-arm` container to digest
+`sha256:edb1c953438c6f720ddb79c3762f3972013b7fbbaf4fff3592fc869983e7afc5`
+and the checkout/upload actions to commit SHAs. The build matrix in `build.yaml`
+remains the source of board/shield selection. Each target uploads its UF2,
+effective `.config`, `zephyr.dts`, and `west-frozen.yml` as a separate artifact.
+
 Zephyr is explicitly overridden in the west manifest because the fixes branch in
 ZMK's imported manifest can move. Its module imports retain ZMK's exclusions.
 The driver remains external: its ZMK activity-aware wake modes are used by this
