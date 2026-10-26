@@ -24,7 +24,9 @@
                 <&kp LEFT_WIN>,
                 <&macro_wait_time 100>,
                 <&kp SPACE>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp SPACE>,
+                <&kp LEFT_WIN>;
 
             label = "LANG";
         };

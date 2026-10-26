@@ -1,5 +1,65 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build firmware
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firmware-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
+  matrix:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - id: matrix
+        run: echo "matrix=$(yq -oj -I0 build.yaml)" >> "$GITHUB_OUTPUT"
+
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    needs: matrix
+    runs-on: ubuntu-24.04
+    container:
+      image: zmkfirmware/zmk-build-arm@sha256:edb1c953438c6f720ddb79c3762f3972013b7fbbaf4fff3592fc869983e7afc5
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.matrix.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Fetch dependencies
+        run: |
+          west init -l config
+          west update --fetch-opt=--filter=tree:0
+          west zephyr-export
+          west manifest --resolve > west-resolved.yml
+          west manifest --freeze --active-only > west-frozen.yml
+      - name: Build
+        env:
+          SHIELD: ${{ matrix.shield }}
+          BOARD: ${{ matrix.board }}
+        run: |
+          west build -s zmk/app -d build -b "$BOARD" -- \
+            -DZMK_CONFIG="$GITHUB_WORKSPACE/config" -DSHIELD="$SHIELD"
+      - name: Preserve firmware and build configuration
+        if: always()
+        env:
+          SHIELD: ${{ matrix.shield }}
+        run: |
+          mkdir -p artifacts
+          for file in build/zephyr/zmk.uf2 build/zephyr/.config build/zephyr/zephyr.dts west-frozen.yml west-resolved.yml; do
+            if [ -f "$file" ]; then cp "$file" "artifacts/$(basename "$file")"; fi
+          done
+          if [ -f artifacts/zmk.uf2 ]; then mv artifacts/zmk.uf2 "artifacts/$SHIELD.uf2"; fi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        if: always()
+        with:
+          name: firmware-${{ matrix.shield }}
+          path: artifacts/
+          include-hidden-files: true
