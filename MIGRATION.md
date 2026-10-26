@@ -26,6 +26,14 @@ keyboard and are not interchangeable with the stock driver configuration.
 
 ## Preserved settings
 
+The right central disables Bluetooth 2M PHY (`CONFIG_BT_CTLR_PHY_2M=n`) as a
+compatibility workaround to test with the Ubuntu adapter. The HCI trace showed
+a successful switch to LE 2M followed immediately by a connection timeout during
+pairing, while pairing with a phone worked. This keeps Bluetooth on 1M for the
+central; it does not weaken pairing security. Re-test pairing on Ubuntu after
+flashing the updated right-half firmware. This workaround still needs hardware
+confirmation and can also affect the inter-half link negotiated by the central.
+
 - All 56 bindings on each of the three active layers and the JSON editor layout.
 - Layer-tap: 200 ms, balanced, quick tap 150 ms; mod-tap: tap-preferred.
 - Matrix transform, diode direction, GPIO assignments and sensor bus pins.
