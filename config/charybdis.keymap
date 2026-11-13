@@ -19,14 +19,14 @@
         lang: lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <30>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_WIN>,
-                <&macro_wait_time 100>,
-                <&kp SPACE>,
+                <&kp LCTRL>,
+                <&kp LSHFT>,
                 <&macro_release>,
-                <&kp SPACE>,
-                <&kp LEFT_WIN>;
+                <&kp LSHFT>,
+                <&kp LCTRL>;
 
             label = "LANG";
         };
